@@ -48,7 +48,7 @@ time {
 # ~15 GB of tmpfs space
 
 wc -l </mnt/ramdisk/filelist
-$  596386
+# 596386
 
 du /mnt/ramdisk/usr -b -d 0
 #14130525539     /mnt/ramdisk/usr
@@ -57,5 +57,5 @@ du /mnt/ramdisk/usr -b -d 0
 #15258840        /mnt/ramdisk/usr
 
 du /mnt/ramdisk//usr -d 0 -h
-$ 15G     /mnt/ramdisk//usr
+# 15G     /mnt/ramdisk//usr
 
