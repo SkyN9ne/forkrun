@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # SETUP
 # NOTE: a tmpfs is already mounted at /mnt/ramdisk
 
@@ -17,25 +19,25 @@ time {
 }
 exec {fd}>&-
 
-596386
+#596386
 
-real    182m14.070s
-user    174m50.208s
-sys     42m20.114s
+#real    182m14.070s
+#user    174m50.208s
+#sys     42m20.114s
 
 
 ###############################
 # FORKRUN
 
 time { 
- forkrun sha512sum </mnt/ramdisk/filelist | wc -l
+    forkrun sha512sum </mnt/ramdisk/filelist | wc -l
 }
 
-596386
+#596386
 
-real    0m2.617s
-user    0m40.768s
-sys     0m7.795s
+#real    0m2.617s
+#user    0m40.768s
+#sys     0m7.795s
 
 # FORKRUN IS 4228x TIMES AS FAST!!!
 
@@ -46,13 +48,13 @@ sys     0m7.795s
 # ~15 GB of tmpfs space
 
 wc -l </mnt/ramdisk/filelist
-596386
+#596386
 
 du /mnt/ramdisk/usr -b -d 0
-14130525539     /mnt/ramdisk/usr
+#14130525539     /mnt/ramdisk/usr
 
 /mnt/ramdisk/usr -d 0
-15258840        /mnt/ramdisk/usr
+#15258840        /mnt/ramdisk/usr
 
 du /mnt/ramdisk//usr -d 0 -h
 15G     /mnt/ramdisk//usr
