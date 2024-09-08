@@ -1,4 +1,4 @@
-#!/usr/bion/env bash
+#!/usr/bin/env bash
 
 shopt -s extglob
 
